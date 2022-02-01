@@ -1,0 +1,169 @@
+* {
+  font-size: 16px; }
+
+body {
+  background: #54C5D6;
+  font-family: "roboto"; }
+
+.inpt, .main-container .table-container .add-and-delete-section .inputs-name__firtsName, .main-container .table-container .add-and-delete-section .inputs-name__lastName, .main-container .table-container .add-and-delete-section .inputs-name__age, .main-container .table-container .add-and-delete-section .inputs-name__country {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #fff;
+  border-radius: 2px;
+  padding: 0.2em 1em;
+  outline: none;
+  font-size: 1.9em;
+  color: #707070;
+  font-weight: 600; }
+  .inpt::placeholder, .main-container .table-container .add-and-delete-section .inputs-name__firtsName::placeholder, .main-container .table-container .add-and-delete-section .inputs-name__lastName::placeholder, .main-container .table-container .add-and-delete-section .inputs-name__age::placeholder, .main-container .table-container .add-and-delete-section .inputs-name__country::placeholder {
+    color: rgba(148, 148, 148, 0.8); }
+
+.main-container .table-container table, .main-container .table-container th, .main-container .table-container td {
+  border-collapse: collapse;
+  border: 2px solid #fac87a;
+  padding: 1em; }
+  .main-container .table-container table thead, .main-container .table-container th thead, .main-container .table-container td thead {
+    background: #54C5D6;
+    color: #fff;
+    text-align: center; }
+    .main-container .table-container table thead tr th, .main-container .table-container th thead tr th, .main-container .table-container td thead tr th {
+      font-size: 1.3em;
+      text-transform: uppercase;
+      padding: 0.5em;
+      font-weight: 400; }
+  .main-container .table-container table tbody, .main-container .table-container th tbody, .main-container .table-container td tbody {
+    background: #A6FF98;
+    text-align: center; }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .main-container .tittle {
+    font-size: 3.5em;
+    color: #A6FF98;
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4); }
+  .main-container .table-container {
+    background: #fac87a;
+    padding: 2em 1em;
+    border-radius: 0.6em;
+    margin: auto 10%; }
+    .main-container .table-container .add-and-delete-section {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 2em;
+      margin-block-end: 2em; }
+      .main-container .table-container .add-and-delete-section .inputs-name__firtsName {
+        grid-column: 1/span 3; }
+        .main-container .table-container .add-and-delete-section .inputs-name__firtsName::placeholder {
+          font-weight: 400; }
+      .main-container .table-container .add-and-delete-section .inputs-name__lastName {
+        grid-column: 4/span 3; }
+        .main-container .table-container .add-and-delete-section .inputs-name__lastName::placeholder {
+          font-weight: 400; }
+      .main-container .table-container .add-and-delete-section .inputs-name__age {
+        grid-column: 1/3;
+        max-height: 3em;
+        max-width: 6em;
+        font-size: 2em;
+        text-align: center; }
+        .main-container .table-container .add-and-delete-section .inputs-name__age::placeholder {
+          font-weight: 400; }
+      .main-container .table-container .add-and-delete-section .inputs-name__country {
+        grid-column: 3/5; }
+        .main-container .table-container .add-and-delete-section .inputs-name__country::placeholder {
+          font-weight: 400; }
+      .main-container .table-container .add-and-delete-section .inputs-name__add-button, .main-container .table-container .add-and-delete-section .inputs-name__del-button {
+        border: 3px solid #707070;
+        font-size: 2.3em;
+        padding: 0.08em;
+        border-radius: 0.2em; }
+      .main-container .table-container .add-and-delete-section .inputs-name__add-button {
+        background: #A6FF98;
+        transition: all 0.06s; }
+        .main-container .table-container .add-and-delete-section .inputs-name__add-button:hover {
+          background: #7bf668; }
+        .main-container .table-container .add-and-delete-section .inputs-name__add-button:active {
+          background: #3ca72c;
+          color: #fff; }
+      .main-container .table-container .add-and-delete-section .inputs-name__del-button {
+        background: #E39AA0; }
+        .main-container .table-container .add-and-delete-section .inputs-name__del-button:hover {
+          background: #e7747d; }
+        .main-container .table-container .add-and-delete-section .inputs-name__del-button:active {
+          background: #ad303a;
+          color: #fff; }
+    .main-container .table-container table {
+      background: #ffffff;
+      width: 100%; }
+  .main-container .userName {
+    position: relative; }
+    .main-container .userName .fa-user-times {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      color: #E39AA0;
+      cursor: pointer; }
+      .main-container .userName .fa-user-times:hover {
+        color: #e7747d; }
+      .main-container .userName .fa-user-times:active {
+        color: #ad303a; }
+  .main-container .error {
+    margin-top: 20px;
+    border-radius: 3px;
+    background: rgba(173, 48, 58, 0.5);
+    color: #fff;
+    padding: 15px 10px;
+    padding-left: 40px;
+    width: 40%;
+    display: none;
+    margin-bottom: 1em;
+    letter-spacing: 0.05em;
+    line-height: 2em;
+    margin-top: -0.7em;
+    margin-left: 1.4em; }
+    .main-container .error li {
+      font-size: 1.3em; }
+
+@media only screen and (max-width: 1050px) {
+  .add-and-delete-section {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+    justify-items: center !important; }
+    .add-and-delete-section .inputs-name__firtsName {
+      grid-column: 1/3 !important; }
+    .add-and-delete-section .inputs-name__lastName {
+      grid-column: 1/3 !important; }
+    .add-and-delete-section .inputs-name__age {
+      grid-column: 1/3 !important; }
+    .add-and-delete-section .inputs-name__country {
+      grid-column: 1/3 !important; }
+    .add-and-delete-section .inputs-name__add-button, .add-and-delete-section .inputs-name__del-button {
+      grid-column: span 1;
+      width: 100%; }
+
+  .tittle {
+    font-size: 2.2em !important; }
+
+  .inpt, .main-container .table-container .add-and-delete-section .inputs-name__firtsName, .main-container .table-container .add-and-delete-section .inputs-name__lastName, .main-container .table-container .add-and-delete-section .inputs-name__age, .main-container .table-container .add-and-delete-section .inputs-name__country {
+    text-align: center; }
+
+  .table-container {
+    margin: 2% !important;
+    width: 80% !important; } }
+@media only screen and (max-width: 450px) {
+  .tittle {
+    font-size: 1.6em !important; }
+
+  .table-container {
+    margin: 2% !important; }
+    .table-container input {
+      width: 80% !important; }
+    .table-container .inputs-name__add-button, .table-container .inputs-name__del-button {
+      width: 100% !important; } }
+@media only screen and (max-width: 360px) {
+  .tittle {
+    font-size: 1.6em !important; } }
+
+/*# sourceMappingURL=styles.css.map */

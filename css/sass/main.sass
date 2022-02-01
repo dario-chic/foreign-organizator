@@ -1,0 +1,195 @@
+$lightBlue: #54C5D6 
+$lightBrown: #fac87a
+$green: #A6FF98
+$red: #E39AA0
+$black: #707070
+
+*
+    font-size: 16px
+
+body
+    background: $lightBlue
+    font-family: "roboto"
+
+// inputs de texto clase extendida
+.inpt
+    background: none
+    border: none
+    border-bottom: 3px solid #fff
+    border-radius: 2px
+    padding: .2em 1em
+    outline: none
+    font-size: 1.9em
+    color: $black
+    font-weight: 600
+    &::placeholder
+        color: rgba(148, 148, 148,.8)
+
+// Tabla decoration
+.main-container
+    .table-container    
+        table,th,td
+            border-collapse: collapse
+            border: 2px solid $lightBrown
+            padding: 1em
+            thead
+                background: $lightBlue
+                color: #fff
+                text-align: center
+                tr
+                    th
+                        font-size: 1.3em
+                        text-transform: uppercase
+                        padding: .5em
+                        font-weight: 400
+            tbody
+                background: $green
+                text-align: center      
+
+
+
+.main-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    .tittle
+        font-size: 3.5em
+        color: $green
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, .4)
+    .table-container
+        background: $lightBrown
+        padding: 2em 1em
+        border-radius: .6em
+        margin: auto 10%
+        .add-and-delete-section
+            display: grid
+            grid-template-columns: repeat(6,1fr)
+            grid-template-rows: repeat(2,1fr)
+            grid-gap: 2em
+            margin-block-end: 2em
+            .inputs-name__firtsName
+                @extend .inpt
+                grid-column: 1 / span 3
+                &::placeholder
+                    font-weight: 400
+            .inputs-name__lastName
+                @extend .inpt
+                grid-column: 4 / span 3
+                &::placeholder
+                    font-weight: 400
+            .inputs-name__age
+                &::placeholder
+                    font-weight: 400
+                @extend .inpt
+                grid-column: 1 / 3
+                max-height: 3em
+                max-width: 6em
+                font-size: 2em
+                text-align: center
+            .inputs-name__country
+                @extend .inpt
+                grid-column: 3 / 5
+                &::placeholder
+                    font-weight: 400
+            .inputs-name__add-button,.inputs-name__del-button
+                border: 3px solid $black
+                font-size: 2.3em
+                padding: .08em
+                border-radius: .2em
+            .inputs-name__add-button
+                background: $green
+                transition: all .06s
+                &:hover
+                    background: #7bf668
+                &:active
+                    background: #3ca72c
+                    color: #fff
+            .inputs-name__del-button
+                background: $red
+                &:hover
+                    background: #e7747d
+                &:active
+                    background: #ad303a
+                    color: #fff     
+        table
+            background: #ffffff
+            width: 100%
+            thead
+
+    
+    .userName
+        position: relative 
+        .fa-user-times
+            position: absolute 
+            right: 3px
+            top: 3px
+            color: $red
+            cursor: pointer
+            &:hover
+                color: #e7747d
+            &:active
+                color: #ad303a   
+
+    .error
+        margin-top: 20px
+        border-radius: 3px
+        background: rgba(173, 48, 58,.5)   
+        color: #fff
+        padding: 15px 10px
+        padding-left: 40px
+        width: 40%
+        display: none
+        margin-bottom: 1em
+        letter-spacing: .05em
+        line-height: 2em
+        margin-top: -.7em
+        margin-left: 1.4em
+        li
+            font-size: 1.3em
+
+
+@media only screen and (max-width:1050px)
+    .add-and-delete-section
+        grid-template-columns: repeat(2,1fr) !important
+        grid-template-rows: repeat(4,1fr)  !important
+        justify-items: center !important
+        .inputs-name__firtsName
+            grid-column: 1 / 3 !important
+        .inputs-name__lastName
+            grid-column: 1 / 3 !important
+        .inputs-name__age 
+            grid-column: 1 / 3 !important
+        .inputs-name__country
+            grid-column: 1 / 3 !important
+        .inputs-name__add-button,.inputs-name__del-button
+            grid-column: span 1
+            width: 100%
+
+    .tittle
+        font-size: 2.2em !important
+
+    .inpt
+        text-align: center
+
+    .table-container
+        margin: 2% !important
+        input
+        width: 80% !important   
+
+
+@media only screen and (max-width:450px)
+    .tittle
+        font-size: 1.6em !important
+        
+    .table-container
+        margin: 2% !important
+        input
+            width: 80% !important
+        .inputs-name__add-button,.inputs-name__del-button
+            width: 100% !important
+
+@media only screen and (max-width:360px)
+    .tittle
+        font-size: 1.6em !important
+
+
