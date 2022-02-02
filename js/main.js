@@ -84,7 +84,7 @@ function addUser(){
 
 // ** this section works adding 'tr' elements with users data into 'td' created before
     for (data in userData){
-        var dataSelect = document.createTextNode(userData[data].charAt(0).toUpperCase() + userData[data].slice(1)).toLowerCase());
+        var dataSelect = document.createTextNode(userData[data].charAt(0).toUpperCase() + userData[data].slice(1).toLowerCase());
 
         var rowData = document.createElement('td');
         rowData.appendChild(dataSelect);
