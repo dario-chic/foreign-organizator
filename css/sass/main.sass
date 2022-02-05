@@ -1,7 +1,7 @@
 $lightBlue: #54C5D6 
 $lightBrown: #fac87a
 $green: #A6FF98
-$red: #E39AA0
+$red: rgb(227, 154, 160)
 $black: #707070
 
 *
@@ -44,7 +44,8 @@ body
                         font-weight: 400
             tbody
                 background: $green
-                text-align: center      
+                text-align: center
+
 
 
 
@@ -117,18 +118,28 @@ body
             thead
 
     
-    .userName
+    td
         position: relative 
         .fa-user-times
             position: absolute 
-            right: 3px
+            left: 3px
             top: 3px
             color: $red
             cursor: pointer
             &:hover
                 color: #e7747d
             &:active
-                color: #ad303a   
+                color: #ad303a 
+        .fa-edit
+            position: absolute 
+            right: 3px
+            bottom: 3px
+            color: $lightBlue
+            cursor: pointer
+            &:hover
+                color: #064f6b
+            &:active
+                color: #180cc0                  
 
     .error
         margin-top: 20px
@@ -147,6 +158,45 @@ body
         li
             font-size: 1.3em
 
+.edit
+    display: none
+    grid-template-columns: 1fr 1fr
+    grid-template-rows:  1fr 1fr
+    grid-gap: .4em
+    .text-edit
+        background: linear-gradient(to bottom, transparent, rgba(227, 154, 160,.7)150%)
+        border: none
+        border-bottom: 2px solid $red
+        border-radius: 2px
+        outline: none
+        padding-left: .5em
+        font-size: 1.6em
+        color: $black
+        font-weight: 400
+        grid-column: 1 / -1
+    .inputs-name__add-button,.inputs-name__del-button
+        border: 3px solid $black
+        font-size: 1.2em
+        padding: .2em
+        border-radius: .2em
+    .inputs-name__add-button
+        background: $lightBlue
+        transition: all .06s
+        &:hover
+            background: #4498cf 
+        &:active
+            background: #207481 
+            color: #fff
+    .inputs-name__del-button
+        background: $red
+        &:hover
+            background: #e7747d
+        &:active
+            background: #ad303a
+            color: #fff     
+
+.que
+    display: none
 
 @media only screen and (max-width:1050px)
     .add-and-delete-section
@@ -177,7 +227,18 @@ body
         width: 80% !important   
 
 
+@media only screen and (max-width:552px)
+    .tittle
+        font-size: 1.6em !important
+
+    .inpt
+        width: 90%
+    
+
 @media only screen and (max-width:450px)
+    *
+        font-size: 12px
+    
     .tittle
         font-size: 1.6em !important
         
@@ -188,8 +249,7 @@ body
         .inputs-name__add-button,.inputs-name__del-button
             width: 100% !important
 
-@media only screen and (max-width:360px)
-    .tittle
-        font-size: 1.6em !important
+    .inpt
+        font-size: 1.4em
 
 

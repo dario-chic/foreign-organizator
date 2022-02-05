@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <title>Organizador de Listas</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <title>Organizador de Listas</title>
 </head>
+
 <body>
-    <div class="main-container">
-        <h1 class="tittle">FOREIGN ORGANIZATOR</h1>
-        <div class="table-container">
-            <div>
-                <ul class="error" id="error">
-                </ul>
-            </div>
-            <div class="add-and-delete-section" id="form">
-                    <input type="text" class="inputs-name__firtsName" id="firtsName" placeholder="Firts Name..." >
-                    <input type="text" class="inputs-name__lastName" id="lastName" placeholder="Last Name..." >
-                    <input type="number" class="inputs-name__age" id="age" placeholder="Age" maxlength="10">
-                    <input type="text" class="inputs-name__country" id="country" placeholder="Country..." >
-                    <button class="inputs-name__add-button" id="add-button">ADD</button>
-                    <button class="inputs-name__del-button" id="del-button">DEL</button>
-            </div>
-            <table>
-                <thead class="table-head" id="table-head">
-                    <tr>
-                        <th colspan="2">Name</th>
-                        <th>Age</th>
-                        <th>Country</th>
-                    </tr>
-                </thead>
-                <tbody class="table-body" id="table-body">
-                </tbody>
-            </table>
-        </div>
+  <div class="main-container">
+    <h1 class="tittle">FOREIGN ORGANIZATOR</h1>
+    <div class="table-container">
+      <div>
+        <ul class="error" id="error">
+        </ul>
+      </div>
+      <div class="add-and-delete-section" id="form">
+        <input type="text" class="inputs-name__firtsName" id="firtsName" placeholder="Firts Name...">
+        <input type="text" class="inputs-name__lastName" id="lastName" placeholder="Last Name...">
+        <input type="number" class="inputs-name__age" id="age" placeholder="Age" maxlength="10">
+        <input type="text" class="inputs-name__country" id="country" placeholder="Country...">
+        <button class="inputs-name__add-button" id="add-button">ADD</button>
+        <button class="inputs-name__del-button" id="del-button">DEL</button>
+      </div>
+      <table>
+        <thead class="table-head" id="table-head">
+          <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody class="table-body" id="table-body">
+        </tbody>
+      </table>
     </div>
-    <script src="js/main.js"></script>
+  </div>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

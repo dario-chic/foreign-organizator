@@ -88,7 +88,7 @@ body {
           background: #3ca72c;
           color: #fff; }
       .main-container .table-container .add-and-delete-section .inputs-name__del-button {
-        background: #e39aa0; }
+        background: #E39AA0; }
         .main-container .table-container .add-and-delete-section .inputs-name__del-button:hover {
           background: #e7747d; }
         .main-container .table-container .add-and-delete-section .inputs-name__del-button:active {
@@ -97,28 +97,18 @@ body {
     .main-container .table-container table {
       background: #ffffff;
       width: 100%; }
-  .main-container td {
+  .main-container .userName {
     position: relative; }
-    .main-container td .fa-user-times {
-      position: absolute;
-      left: 3px;
-      top: 3px;
-      color: #e39aa0;
-      cursor: pointer; }
-      .main-container td .fa-user-times:hover {
-        color: #e7747d; }
-      .main-container td .fa-user-times:active {
-        color: #ad303a; }
-    .main-container td .fa-edit {
+    .main-container .userName .fa-user-times {
       position: absolute;
       right: 3px;
-      bottom: 3px;
-      color: #54C5D6;
+      top: 3px;
+      color: #E39AA0;
       cursor: pointer; }
-      .main-container td .fa-edit:hover {
-        color: #064f6b; }
-      .main-container td .fa-edit:active {
-        color: #180cc0; }
+      .main-container .userName .fa-user-times:hover {
+        color: #e7747d; }
+      .main-container .userName .fa-user-times:active {
+        color: #ad303a; }
   .main-container .error {
     margin-top: 20px;
     border-radius: 3px;
@@ -135,46 +125,6 @@ body {
     margin-left: 1.4em; }
     .main-container .error li {
       font-size: 1.3em; }
-
-.edit {
-  display: none;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 0.4em; }
-  .edit .text-edit {
-    background: linear-gradient(to bottom, transparent, rgba(227, 154, 160, 0.7) 150%);
-    border: none;
-    border-bottom: 2px solid #e39aa0;
-    border-radius: 2px;
-    outline: none;
-    padding-left: 0.5em;
-    font-size: 1.6em;
-    color: #707070;
-    font-weight: 400;
-    grid-column: 1/-1; }
-  .edit .inputs-name__add-button, .edit .inputs-name__del-button {
-    border: 3px solid #707070;
-    font-size: 1.2em;
-    padding: 0.2em;
-    border-radius: 0.2em; }
-  .edit .inputs-name__add-button {
-    background: #54C5D6;
-    transition: all 0.06s; }
-    .edit .inputs-name__add-button:hover {
-      background: #4498cf; }
-    .edit .inputs-name__add-button:active {
-      background: #207481;
-      color: #fff; }
-  .edit .inputs-name__del-button {
-    background: #e39aa0; }
-    .edit .inputs-name__del-button:hover {
-      background: #e7747d; }
-    .edit .inputs-name__del-button:active {
-      background: #ad303a;
-      color: #fff; }
-
-.que {
-  display: none; }
 
 @media only screen and (max-width: 1050px) {
   .add-and-delete-section {
@@ -202,16 +152,7 @@ body {
   .table-container {
     margin: 2% !important;
     width: 80% !important; } }
-@media only screen and (max-width: 552px) {
-  .tittle {
-    font-size: 1.6em !important; }
-
-  .inpt, .main-container .table-container .add-and-delete-section .inputs-name__firtsName, .main-container .table-container .add-and-delete-section .inputs-name__lastName, .main-container .table-container .add-and-delete-section .inputs-name__age, .main-container .table-container .add-and-delete-section .inputs-name__country {
-    width: 90%; } }
 @media only screen and (max-width: 450px) {
-  * {
-    font-size: 12px; }
-
   .tittle {
     font-size: 1.6em !important; }
 
@@ -220,9 +161,9 @@ body {
     .table-container input {
       width: 80% !important; }
     .table-container .inputs-name__add-button, .table-container .inputs-name__del-button {
-      width: 100% !important; }
+      width: 100% !important; } }
+@media only screen and (max-width: 360px) {
+  .tittle {
+    font-size: 1.6em !important; } }
 
-  .inpt, .main-container .table-container .add-and-delete-section .inputs-name__firtsName, .main-container .table-container .add-and-delete-section .inputs-name__lastName, .main-container .table-container .add-and-delete-section .inputs-name__age, .main-container .table-container .add-and-delete-section .inputs-name__country {
-    font-size: 1.4em; } }
-
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=main.css.map */
